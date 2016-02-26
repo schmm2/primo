@@ -1,0 +1,84 @@
+{{!< default}}
+<main id="post" class="main" role="main">
+	<article class="article" role="article" itemscope itemtype="http://schema.org/Article">
+		{{#post}}
+			<header class="post-header">
+				<h1 class="post-title" itemprop="headline">{{title}}</h1>
+				<time class="post-date" datetime="{{date format="DD-MMM-YYYY"}}" itemprop="datePublished">{{date format='D MMM YYYY'}}</time>
+			</header>
+			<div class="post-content" itemprop="articleBody">
+				{{content}}
+			</div>
+			{{#if tags}}
+				<div class="post-tags">
+					<h6>Tags</h6>
+					{{tags separator=" "}}
+				</div>
+			{{/if}}
+			<div id="post-readmore">
+				{{#prev_post}}
+					<a class="post-rev post-readmore-link" href="{{url}}">
+						<div class="post-readmore-title">{{title}}</div>
+					</a>
+				{{/prev_post}}		
+				{{#next_post}}
+			    	<a class="post-next post-readmore-link" href="{{url}}">
+						<span class="post-readmore-title">{{title}}</span>
+					</a>
+				{{/next_post}}
+			</div>
+			
+			<div id="post-share">
+			    <h4><span>Share it</span></h4>
+				<div id="post-share-icons">
+				    <a class="share-icon" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}">
+					    <i class="fa fa-twitter"></i>
+					</a>
+				    <a class="share-icon" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}">
+					    <i class="fa fa-facebook"></i>
+					</a>
+				    <a class="share-icon" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}">
+						<i class="fa fa-google-plus"></i>
+					</a>
+				</div>
+			</div>
+		    {{#if author}}
+		    <div id="post-author">
+			    <h4><span>Written by</span></h4>
+		      	<div id="author"> 
+			        {{#if author.image}}
+			        	<div class="author-image" style='background-image: url("{{author.image}}")' ></div>
+			        {{/if}}	        
+			        <h6 class="author-name">{{author.name}}</h6>
+			        <div class="author-bio">
+			        	<p>{{author.bio}}</p>
+			        </div> 
+		      	</div>
+		    </div>
+			{{/if}}
+			<div id="post-comments">
+				<h4><span>Comments</span></h4>
+				<div id="disqus_thread"></div>
+				<script type="text/javascript">
+					if(typeof disqus_shortname !== 'undefined'){
+						
+						var disqus_identifier = '{{id}}';
+						
+						/**** Disqus Comments ****/
+					    (function() {
+					        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					    })();			
+					}
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</div>
+		{{/post}}
+	</article>
+	{{#if pagination}}
+		<div class="pagination">
+			{{{pagination}}}
+		</div>
+	{{/if}}
+</main>

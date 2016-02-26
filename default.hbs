@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:400,300,500' rel='stylesheet' type='text/css'>
+    
+    {{! Styles }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/fonts.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+    
+    {{! Scripts }}    
+    <script type="text/javascript" src='{{asset "js/masonry.pkgd.min.js"}}'></script>
+    <script type="text/javascript" src='{{asset "js/jquery-2.2.0.min.js"}}'></script>
+    <script type="text/javascript" src='{{asset "js/main.js"}}'></script>
+     
+    {{#is "post"}}
+		 <script type="text/javascript" src='{{asset "js/post.js"}}'></script>
+	{{/is}}
+        
+    {{! Responsive Meta Tags }}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div id="wrapper">
+    	<div id="header">
+    		<div id="header-selectables">
+	    		<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
+	    		<div id="nav-switch">
+		    		<div class="middle-bar"></div>
+	    		</div>		
+    		</div>
+    		<div id="nav-mobile">
+	    		{{navigation}}
+    		</div>    		
+	    	{{! ----- Single Post -----}}
+			{{#if post}}
+				{{#post}}
+					{{#if image}}
+						<div id="header-image" style='background-image: url("{{image}}")'></div>
+					{{else}}
+						{{#if @blog.cover}}
+							<div id="header-image" style='background-image: url("{{@blog.cover}}")'></div>
+						{{/if}}
+					{{/if}}
+				{{/post}}
+			{{! ----- Home -----}}
+			{{else}}
+				{{#if @blog.cover}}
+					<div id="header-image" style='background-image: url("{{@blog.cover}}")'></div>
+				{{else}}
+					<div id="header-image"></div>
+				{{/if}}
+			{{/if}}
+		</div>
+		<div id="content">
+			{{{body}}}
+		</div>	
+		<footer>
+			{{ghost_foot}}
+		</footer>
+    </div>
+</body>
+</html>
