@@ -43,7 +43,7 @@
 	    			<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
 	    		{{else}}
 	    			<a href="{{@blog.url}}">
-		    			<div id="blogtitle">{{@blog.title}}</div>
+		    			<div id="blog-title">{{@blog.title}}</div>
 	    			</a>
 	    		{{/if}}
 	    		<div id="nav-switch">
@@ -76,9 +76,7 @@
 		<div id="content">
 			{{{body}}}
 		</div>	
-		<footer>
-			{{ghost_foot}}
-		</footer>
+		<footer>{{ghost_foot}}</footer>
     </div>
 </body>
 </html>
