@@ -2,6 +2,11 @@
 <main id="post" class="main" role="main">
 	<article class="article" role="article" itemscope itemtype="http://schema.org/Article">
 		{{#post}}
+			{{#if tags}}
+				<div id="tags">
+					# {{tags separator=" "}}
+				</div>
+			{{/if}}		
 			<header class="post-header">
 				<h1 class="post-title" itemprop="headline">{{title}}</h1>
 				<time class="post-date" datetime="{{date format="DD-MMM-YYYY"}}" itemprop="datePublished">{{date format='D MMM YYYY'}}</time>
@@ -9,23 +14,21 @@
 			<div class="post-content" itemprop="articleBody">
 				{{content}}
 			</div>
-			{{#if tags}}
-				<div class="post-tags">
-					<h6>Tags</h6>
-					{{tags separator=" "}}
-				</div>
-			{{/if}}
-			<div id="post-readmore">
-				{{#prev_post}}
-					<a class="post-rev post-readmore-link" href="{{url}}">
+			<div id="post-readmore">	
+				{{#next_post}}			    	
+			    	<a class="post-next post-readmore-link" href="{{url}}">
+						<div class="post-readmore-image-overlay"></div>
+						<div class="{{^if image}}noimage{{/if}} post-readmore-image" style='background-image: url("{{image}}")'></div>
 						<div class="post-readmore-title">{{title}}</div>
 					</a>
-				{{/prev_post}}		
-				{{#next_post}}
-			    	<a class="post-next post-readmore-link" href="{{url}}">
-						<span class="post-readmore-title">{{title}}</span>
+				{{/next_post}} 
+				{{#prev_post}}
+					<a class="post-prev post-readmore-link" href="{{url}}">
+						<div class="post-readmore-image-overlay"></div>
+						<div class="{{^if image}}noimage{{/if}} post-readmore-image"style='background-image: url("{{image}}")'></div>
+						<div class="post-readmore-title">{{title}}</div>						
 					</a>
-				{{/next_post}}
+				{{/prev_post}}	
 			</div>
 			
 			<div id="post-share">
@@ -43,19 +46,24 @@
 				</div>
 			</div>
 		    {{#if author}}
+		    {{#author}}
 		    <div id="post-author">
 			    <h4><span>Written by</span></h4>
 		      	<div id="author"> 
-			        {{#if author.image}}
-			        	<div class="author-image" style='background-image: url("{{author.image}}")' ></div>
+			        {{#if image}}
+			        	<a href="{{url}}">
+							<div class="author-image" style='background-image: url("{{image}}")'></div>
+				       	</a>
 			        {{/if}}	        
-			        <h6 class="author-name">{{author.name}}</h6>
+			        <a href="{{url}}"><h6 class="author-name">{{name}}</h6></a>
 			        <div class="author-bio">
-			        	<p>{{author.bio}}</p>
+			        	<p>{{bio}}</p>
 			        </div> 
 		      	</div>
 		    </div>
+		    {{/author}}
 			{{/if}}
+			
 			<div id="post-comments">
 				<h4><span>Comments</span></h4>
 				<div id="disqus_thread"></div>

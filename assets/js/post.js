@@ -3,4 +3,7 @@ $( document ).ready(function() {
 	if(typeof disqus_shortname === 'undefined'){
 		$("#post-comments").remove();
 	}
+	
+	// highlight the code
+	$('code').each(function(i, e) {hljs.highlightBlock(e)});
 });

@@ -5,8 +5,17 @@
   font-weight: 400; }
 @font-face {
   font-family: 'Monteserrat';
-  src: url("fonts/montserrat/montserrat-Bold.ttf") format("truetype");
+  src: url("fonts/montserrat/montserrat-bold.ttf") format("truetype");
   font-weight: 700; }
+/*----- Oswald -----*/
+@font-face {
+  font-family: 'Oswald';
+  src: url("fonts/oswald/oswald-regular.ttf") format("truetype");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Oswald';
+  src: url("fonts/oswald/oswald-light.ttf") format("truetype");
+  font-weight: 300; }
 /*----- font Awesome -----*/
 @font-face {
   font-family: 'FontAwesome';

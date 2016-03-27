@@ -8,13 +8,16 @@
     {{! Page Meta }}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Hind:400,300,500' rel='stylesheet' type='text/css'>
     
     {{! Styles }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset "css/fonts.css"}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/animate.css"}}" />
+	{{#is "post"}}
+		<link rel="stylesheet" type="text/css" href="{{asset "css/highlight/monokai-sublime-primo.css"}}" />
+    {{/is}}
     
     {{! Scripts }}    
     <script type="text/javascript" src='{{asset "js/masonry.pkgd.min.js"}}'></script>
@@ -23,6 +26,7 @@
      
     {{#is "post"}}
 		 <script type="text/javascript" src='{{asset "js/post.js"}}'></script>
+		 <script type="text/javascript" src='{{asset "js/highlight.pack.js"}}'></script>
 	{{/is}}
         
     {{! Responsive Meta Tags }}
@@ -35,7 +39,13 @@
     <div id="wrapper">
     	<div id="header">
     		<div id="header-selectables">
-	    		<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
+	    		{{#if @blog.logo}}
+	    			<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
+	    		{{else}}
+	    			<a href="{{@blog.url}}">
+		    			<div id="blogtitle">{{@blog.title}}</div>
+	    			</a>
+	    		{{/if}}
 	    		<div id="nav-switch">
 		    		<div class="middle-bar"></div>
 	    		</div>		

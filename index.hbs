@@ -1,6 +1,10 @@
 {{!< default}}
 <main id="posts" class="main-primo" role="main">
 	
+	{{#tag}}
+		<div id="tags"># {{name}}</div>
+	{{/tag}}
+	
 	<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "gutter": 5, "gutter": ".gutter-sizer", "columnWidth": ".grid-sizer", "percentPosition": true }'>
 		<div class="grid-sizer"></div>
 		<div class="gutter-sizer"></div>
