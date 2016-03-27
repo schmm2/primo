@@ -19,4 +19,4 @@ primo - Ghost Theme
 * Social Media Links
 * Favorite Tag for Post
 * Media Post (Youtube, Vimeo...)
-~~* Quotes~~
+* ~~Quotes~~
