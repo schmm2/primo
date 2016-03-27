@@ -15,20 +15,24 @@
 				{{content}}
 			</div>
 			<div id="post-readmore">	
+				<div id="post-next" class="post-readmore-element" >
 				{{#next_post}}			    	
-			    	<a class="post-next post-readmore-link" href="{{url}}">
+			    	<a href="{{url}}">
 						<div class="post-readmore-image-overlay"></div>
 						<div class="{{^if image}}noimage{{/if}} post-readmore-image" style='background-image: url("{{image}}")'></div>
 						<div class="post-readmore-title">{{title}}</div>
 					</a>
 				{{/next_post}} 
+				</div>
+				<div id="post-prev" class="post-readmore-element" >
 				{{#prev_post}}
-					<a class="post-prev post-readmore-link" href="{{url}}">
+					<a href="{{url}}">
 						<div class="post-readmore-image-overlay"></div>
 						<div class="{{^if image}}noimage{{/if}} post-readmore-image"style='background-image: url("{{image}}")'></div>
 						<div class="post-readmore-title">{{title}}</div>						
 					</a>
 				{{/prev_post}}	
+				</div>
 			</div>
 			
 			<div id="post-share">
