@@ -56,26 +56,13 @@ h6{
 		z-index: 1;
 	}
 	
-	#nav-mobile{
-		width: 100%;
-		height: 100%;
-		background-color: #222222;
-		z-index: -1000;
-		opacity: 0;
-		position: absolute;
-		
-		$animationTimeNavMobile: 0.4s;
-		
-		// fade out animation
-		@include transition-property(z-index, opacity);
-		@include transition-delay(4 * $animationTimeNavMobile, 3 * $animationTimeNavMobile);
-		@include transition-timing-function(ease-out);
-		@include transition-duration(0s, $animationTimeNavMobile);
-		
-		/* link Elements */
-		$linkElements: 15;
-		
-		&.active{
+	/* link Elements */
+	$linkElements: 15;
+	
+	$animationTimeNavMobile: 0.4s;
+	
+	&.nav-mobile-active{	
+		#nav-mobile{
 			left: 0px;
 			opacity: 1;
 			z-index: 50;
@@ -97,7 +84,29 @@ h6{
 				}
 			}
 		}
+		
+		#socialLinks{
+			opacity: 0;
+			visibility: hidden;
+			
+			@include transition-delay(0s);
+			@include transition-duration(0.2s);
+		}
+	}
 	
+	#nav-mobile{
+		width: 100%;
+		height: 100%;
+		background-color: #222222;
+		z-index: -1000;
+		opacity: 0;
+		position: absolute;		
+		
+		// fade out animation
+		@include transition-property(z-index, opacity);
+		@include transition-delay(4 * $animationTimeNavMobile, 3 * $animationTimeNavMobile);
+		@include transition-timing-function(ease-out);
+		@include transition-duration(0s, $animationTimeNavMobile);
 		
 		ul{
 			@include positionCenter(-50%,-50%);
@@ -149,8 +158,7 @@ h6{
 		}
 	}
 	
-	#header-selectables{
-		
+	#header-selectables{		
 		@extend %flexbox;
 		@extend %justifyContent-spaceBetween;
 		@extend %alignItems-center;
@@ -261,12 +269,18 @@ h6{
 		}
 	}
 	
-	#socialLinks{
-		
+	#socialLinks{		
 		position: relative;
 		z-index: 100;
     	width: 100%;
-    	top: -70px;
+    	top: -80px;
+    	
+    	@include transition-property(visibility, opacity);
+		@include transition-delay(4 * $animationTimeNavMobile);
+    	@include transition-duration($animationTimeNavMobile);
+    		
+    	opacity: 1;
+    	visibility: visible;
     	
     	@extend %flexbox;
     	@extend %justifyContent-center;
