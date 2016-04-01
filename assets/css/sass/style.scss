@@ -379,21 +379,31 @@ h6{
 			}
 		}
 		
-		.pagination{
+		.pagination{			
+			@extend %flexbox;
+			@extend %justifyContent-spaceBetween;
 			
 			margin: 4vh 0px 3vh 0px;
-			text-align: center;
+			
+			*{
+				@include flex-grow(1);
+				@include flex-basis(0);
+			}
+			
+			#newer-posts{
+				text-align: left;
+			}
+			
+			#older-posts{
+				text-align: right;
+			}
+			
+			#page-number{
+				text-align: center;
+			}
 			
 			a{
 				color: $color-text;
-			}
-			
-			.older-posts{
-				margin-left: 20px;
-			}
-			
-			.newer-posts{
-				margin-right: 20px;
 			}
 		}
 	}

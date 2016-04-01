@@ -7,7 +7,7 @@ primo - Ghost Theme
 * Masonry.js, MIT License
 * Highlight.js, BSD License
 
-## CSS
+### CSS
 * Animate.css, MIT License
 * Font-Awesome, GPL License
 
