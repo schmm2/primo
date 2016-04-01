@@ -6,6 +6,7 @@ primo - Ghost Theme
 * Jquery, MIT License
 * Masonry.js, MIT License
 * Highlight.js, BSD License
+* FitVids.js, Not set
 
 ### CSS
 * Animate.css, MIT License
@@ -16,7 +17,7 @@ primo - Ghost Theme
 * Subscribe 
 * Search
 * Tag overview
-* Social Media Links
+* ~~Social Media Links~~
 * Favorite Tag for Post
 * Media Post (Youtube, Vimeo...)
 * ~~Quotes~~

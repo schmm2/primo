@@ -14,7 +14,7 @@
   background-position: center center;
   background-repeat: no-repeat; }
 
-#header #header-selectables, .home-template #posts .grid .grid-item .post-content .post-header, .archive-template #posts .grid .grid-item .post-content .post-header, .tag-template #posts .grid .grid-item .post-content .post-header, .home-template #posts .pagination, .archive-template #posts .pagination, .tag-template #posts .pagination, .post-template #post #post-readmore, .post-template #post #post-readmore .post-readmore-element, .post-template #post #post-share #post-share-icons, .post-template #post #post-share h4, .post-template #post #post-author h4, .post-template #post #post-comments h4 {
+#header #header-selectables, #header #socialLinks, .home-template #posts .grid .grid-item .post-content .post-header, .archive-template #posts .grid .grid-item .post-content .post-header, .tag-template #posts .grid .grid-item .post-content .post-header, .home-template #posts .pagination, .archive-template #posts .pagination, .tag-template #posts .pagination, .post-template #post #post-readmore, .post-template #post #post-readmore .post-readmore-element, .post-template #post #post-share #post-share-icons, .post-template #post #post-share h4, .post-template #post #post-author h4, .post-template #post #post-comments h4 {
   display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,7 +30,7 @@
   -ms-justify-content: space-between;
   justify-content: space-between; }
 
-.post-template #post #post-readmore .post-readmore-element, .post-template #post #post-share #post-share-icons {
+#header #socialLinks, .post-template #post #post-readmore .post-readmore-element, .post-template #post #post-share #post-share-icons {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -336,6 +336,28 @@ h6 {
       width: 60px;
       height: 60px;
       background-size: 60px 60px; }
+  #header #socialLinks {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    top: -70px; }
+    #header #socialLinks a {
+      font-family: 'FontAwesome';
+      color: white;
+      margin: 0.6vw 0.6vw;
+      font-size: 2.2rem; }
+    #header #socialLinks .facebook:before {
+      content: "\f09a"; }
+    #header #socialLinks .twitter:before {
+      content: "\f099"; }
+    #header #socialLinks .instagram:before {
+      content: "\f16d"; }
+    #header #socialLinks .xing:before {
+      content: "\f168"; }
+    #header #socialLinks .linkedin:before {
+      content: "\f0e1"; }
+    #header #socialLinks .rss:before {
+      content: "\f09e"; }
   @media screen and (max-width: 1100px) {
     #header {
       position: inherit;
@@ -343,7 +365,11 @@ h6 {
       height: 40vh; }
       #header #nav-switch {
         left: auto;
-        right: 30px; } }
+        right: 30px; }
+      #header #socialLinks {
+        top: -60px; }
+        #header #socialLinks a {
+          margin: 0.6vw 2vw; } }
 
 #content {
   margin-left: 22vw; }
@@ -441,6 +467,8 @@ h6 {
       color: #b3b5b7; }
   .post-template #post #post-share, .post-template #post #post-author, .post-template #post #post-comments {
     margin-top: 10vh; }
+  .post-template #post #post-content .fluid-width-video-wrapper {
+    margin-top: 6vh; }
   .post-template #post #post-readmore {
     margin-top: 13vh; }
     @media screen and (max-width: 750px) {

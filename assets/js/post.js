@@ -6,4 +6,7 @@ $( document ).ready(function() {
 	
 	// highlight the code
 	$('code').each(function(i, e) {hljs.highlightBlock(e)});
+	
+	// video fluid size
+	 $("#post-content").fitVids();
 });

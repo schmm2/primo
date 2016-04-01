@@ -261,6 +261,48 @@ h6{
 		}
 	}
 	
+	#socialLinks{
+		
+		position: relative;
+		z-index: 100;
+    	width: 100%;
+    	top: -70px;
+    	
+    	@extend %flexbox;
+    	@extend %justifyContent-center;
+    
+		a{
+			font-family: 'FontAwesome';
+			color: white;
+			margin: 0.6vw 0.6vw;
+			font-size: 2.2rem;
+		}
+		
+		.facebook:before{
+			content: "\f09a";
+		}
+		
+		.twitter:before{
+			content: "\f099";
+		}
+		
+		.instagram:before{
+			content: "\f16d";
+		}
+		
+		.xing:before{
+			content: "\f168";
+		}
+		
+		.linkedin:before{
+			content: "\f0e1";
+		}
+		
+		.rss:before{
+			content: "\f09e";
+		}
+	}
+	
 	@media screen and (max-width: $break-medium) {			
 		position: inherit;
 		width: 100%;
@@ -269,6 +311,15 @@ h6{
 		#nav-switch{
 			left: auto;
 			right: 30px;
+		}
+		
+		#socialLinks{
+			
+			top: -60px;
+			
+			a{
+				margin: 0.6vw 2vw;
+			}
 		}
 	}
 }
@@ -433,6 +484,11 @@ h6{
 			margin-top: 10vh;
 		}
 		
+		#post-content{
+			.fluid-width-video-wrapper{
+				margin-top: 6vh;	
+			}
+		}
 		
 		#post-readmore{
 			@extend %flexbox;
