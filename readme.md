@@ -21,7 +21,7 @@ primo - Ghost Theme v0.1
 * Favorite Tag for Post
 * Media Post (Youtube, Vimeo...)
 * ~~Quotes~~
-* Lightbox
+* ~~Lightbox~~
 
 ### Roadmap V0.3
 * Google Analytics

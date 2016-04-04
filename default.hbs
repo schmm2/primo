@@ -10,18 +10,19 @@
 	    <meta name="description" content="{{meta_description}}" />
 	    
 	    {{! Styles }}
-	    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+	    {{#is "post"}}
+			<link rel="stylesheet" type="text/css" href="{{asset "css/highlight/monokai-sublime-primo.css"}}"/>
+			<link rel="stylesheet" type="text/css" href="{{asset "css/fluidbox.min.css"}}" />
+	    {{/is}}
+	    
 		<link rel="stylesheet" type="text/css" href="{{asset "css/fonts.css"}}" />
 		<link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
 		<link rel="stylesheet" type="text/css" href="{{asset "css/animate.css"}}" />
-		
-		{{#is "post"}}
-			<link rel="stylesheet" type="text/css" href="{{asset "css/highlight/monokai-sublime-primo.css"}}" />
-	    {{/is}}
+		<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 	    
 	    {{! Scripts }}    
+		<script type="text/javascript" src='{{asset "js/jquery-2.2.0.min.js"}}'></script>
 	    <script type="text/javascript" src='{{asset "js/masonry.pkgd.min.js"}}'></script>
-	    <script type="text/javascript" src='{{asset "js/jquery-2.2.0.min.js"}}'></script>
 	    <script type="text/javascript" src='{{asset "js/main.js"}}'></script>
 	    <script type="text/javascript" src='{{asset "js/jquery.ghostHunter.min.js"}}'></script>
 	     
@@ -29,8 +30,10 @@
 			 <script type="text/javascript" src='{{asset "js/post.js"}}'></script>
 			 <script type="text/javascript" src='{{asset "js/highlight.pack.js"}}'></script>
 			 <script type="text/javascript" src='{{asset "js/jquery.fitvids.js"}}'></script>
+			 <script type="text/javascript" src='{{asset "js/jquery.ba-throttle-debounce.min.js"}}'></script>
+			 <script type="text/javascript" src='{{asset "js/jquery.fluidbox.min.js"}}'></script>
 		{{/is}}
-	        
+
 	    {{! Responsive Meta Tags }}
 	    <meta name="HandheldFriendly" content="True" />
 	    <meta name="MobileOptimized" content="320" />
@@ -39,6 +42,7 @@
 	    {{ghost_head}}
 	</head>
 	<body class="{{body_class}}">
+	   
 	    <div id="wrapper">
 	    	<div id="header">
 		    	<div id="header-floated">

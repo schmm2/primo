@@ -8,5 +8,19 @@ $( document ).ready(function() {
 	$('code').each(function(i, e) {hljs.highlightBlock(e)});
 	
 	// video fluid size
-	 $("#post-content").fitVids();
+	$("#post-content").fitVids();
+ 
+	// image lightbox
+	$("#post-content img").each(function(index){
+		$(this).wrap('<a class="lightbox" href="'+this.src+'"></a>');
+	});
+	$().fluidbox({
+       
+    });
+    $('.lightbox')
+	.on('openstart.fluidbox', disableScroll)
+	.on('closestart.fluidbox', enableScroll)
+	.fluidbox({
+		 viewportFill: 0.9,
+	});
 });

@@ -584,6 +584,8 @@ footer {
     color: #6a6c6f; }
 
 /***** Single Post *****/
+.post-template .fluidbox__overlay {
+  background-color: rgba(0, 0, 0, 0.8); }
 .post-template footer {
   /* Need more padding, because #content + #post -> padding-left/padding-right: 8vw */
   padding-left: 8vw;
@@ -757,11 +759,6 @@ html, body {
   color: #6a6c6f;
   font-family: "Hind", Arial, sans-serif;
   line-height: 2.8rem; }
-  html.disable_scroll, body.disable_scroll {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed; }
 
 a {
   text-decoration: none;
