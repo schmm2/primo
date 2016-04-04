@@ -1,5 +1,5 @@
 # primo
-primo - Ghost Theme
+primo - Ghost Theme v0.1
 
 ## External Libraries and Helpers
 ### JS
@@ -14,10 +14,15 @@ primo - Ghost Theme
 
 
 ## Roadmap, to Do
+### Roadmap V0.2
 * Subscribe 
-* Search
 * Tag overview
 * ~~Social Media Links~~
 * Favorite Tag for Post
 * Media Post (Youtube, Vimeo...)
 * ~~Quotes~~
+
+### Roadmap V0.3
+* Google Analytics
+* Loading Circle
+* Search, Waiting for Ghost API

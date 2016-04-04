@@ -53,7 +53,7 @@ h6{
 		width: 100%;
 		height: 100%;
 		@extend %bgCover;
-		z-index: 1;
+		z-index: 1000;
 	}
 	
 	/* link Elements */
@@ -65,7 +65,7 @@ h6{
 		#nav-mobile{
 			left: 0px;
 			opacity: 1;
-			z-index: 50;
+			z-index: 1500;
 			
 			// fade in animation
 			@include transition-property(z-index, opacity);
@@ -85,12 +85,13 @@ h6{
 			}
 		}
 		
-		#socialLinks{
-			opacity: 0;
-			visibility: hidden;
+		#header-floated #socialLinks{
+				opacity: 0;
+				visibility: hidden;
+				
+				@include transition-delay(0s);
+				@include transition-duration(0.2s);
 			
-			@include transition-delay(0s);
-			@include transition-duration(0.2s);
 		}
 	}
 	
@@ -158,162 +159,177 @@ h6{
 		}
 	}
 	
-	#header-selectables{		
-		@extend %flexbox;
-		@extend %justifyContent-spaceBetween;
-		@extend %alignItems-center;
+	#header-floated{
 		
 		position: absolute;
-		z-index: 100;
+		@extend %flexbox;
+		@extend %justifyContent-spaceBetween;
+		@extend %flexDirection-column;
 		width: 100%;
+		height: 100%;	
 		
-		padding: 5vh 3vw;
-		box-sizing: border-box;
+		z-index: 2000;
 		
-		#blog-title{
-			padding: 6px 8px;
-			min-width: 44px;
-			border: solid 2px white;
+		#selectables{		
+			@extend %flexbox;
+			@extend %justifyContent-spaceBetween;
+			@extend %alignItems-center;
+					
+			width: 100%;
+			
+			padding: 5vh 2vw;
 			box-sizing: border-box;
-			text-align: center;
-			color: white;
-			font-size: 2.6rem;
-			font-family: $font-oswald;
-		}
-		
-		#nav-switch{
-			$bar-height: 1px;	
-			$width: 40px;
-			$height: 35px;
-			
-			$barOffset: ($height - 3 * $bar-height) / 2;
-			
-			width: $width;
-			height: $height;
-			position: relative;
-			
-			@extend %userSelect-none;	
 			
 			@media screen and (max-width: $break-medium) {
-				display: block;
-			}	
-		
-			&:hover{
-				cursor: pointer;
+				padding: 5vh 4vw;
 			}
+			
+			#blog-title{
+				padding: 6px 8px;
+				min-width: 44px;
+				border: solid 2px white;
+				box-sizing: border-box;
+				text-align: center;
+				color: white;
+				font-size: 2.6rem;
+				font-family: $font-oswald;
+			}
+			
+			#nav-switch{
+				$bar-height: 1px;	
+				$width: 40px;
+				$height: 35px;
 				
-			.middle-bar{
-				display: block;
-				height: $bar-height;
-				background: white;
+				$barOffset: ($height - 3 * $bar-height) / 2;
+				
 				width: $width;
-				  
-				@include positionCenter(-50%,-50%);
+				height: $height;
+				position: relative;
 				
-				@include transition-duration(0.2s);			
-				@include transition-property(background);
+				@extend %userSelect-none;	
 				
-				@include boxShadow(0px 1px 2px 0px rgba(40,40,40,0.1));
-				
-				&::before, &::after{
+				@media screen and (max-width: $break-medium) {
+					display: block;
+				}	
+			
+				&:hover{
+					cursor: pointer;
+				}
+					
+				.middle-bar{
+					display: block;
+					height: $bar-height;
+					background: white;
+					width: $width;
+					  
+					@include positionCenter(-50%,-50%);
+					
+					@include transition-duration(0.2s);			
+					@include transition-property(background);
+					
 					@include boxShadow(0px 1px 2px 0px rgba(40,40,40,0.1));
 					
-					position: absolute;
-					display: block;
-				  	left: 0;
-				  	width: 100%;
-				  	height: $bar-height;
-				  	background-color: white;
-				  	content: "";	
-				  	
-				  	@include transition-duration(0.2s,0.2s);
-				  	@include transition-delay(0.2s,0s);
+					&::before, &::after{
+						@include boxShadow(0px 1px 2px 0px rgba(40,40,40,0.1));
+						
+						position: absolute;
+						display: block;
+					  	left: 0;
+					  	width: 100%;
+					  	height: $bar-height;
+					  	background-color: white;
+					  	content: "";	
+					  	
+					  	@include transition-duration(0.2s,0.2s);
+					  	@include transition-delay(0.2s,0s);
+					}
+					
+					&::after{
+						bottom: - $barOffset;
+						@include transition-property(bottom, transform);
+					}
+				
+					&::before{				
+						top: - $barOffset;	
+						@include transition-property(top, transform);
+					}	
 				}
 				
-				&::after{
-					bottom: - $barOffset;
-					@include transition-property(bottom, transform);
+				&.active .middle-bar{ 
+					
+					background: transparent;
+					
+					&::after, &::before{
+						@include transition-duration(0.2s,0.2s);		
+						@include transition-delay(0s,0.2s);
+					}
+					
+					&::after{
+						@include rotate(-45deg);
+						bottom: 0px;
+					}
+				
+					&::before{
+						@include rotate(45deg);		
+						top: 0px;
+					}	
 				}
-			
-				&::before{				
-					top: - $barOffset;	
-					@include transition-property(top, transform);
-				}	
 			}
 			
-			&.active .middle-bar{ 
-				
-				background: transparent;
-				
-				&::after, &::before{
-					@include transition-duration(0.2s,0.2s);		
-					@include transition-delay(0s,0.2s);
-				}
-				
-				&::after{
-					@include rotate(-45deg);
-					bottom: 0px;
-				}
-			
-				&::before{
-					@include rotate(45deg);		
-					top: 0px;
-				}	
+			#logo{
+				width: 60px;
+				height: 60px;
+				background-size: 60px 60px;
 			}
 		}
 		
-		#logo{
-			width: 60px;
-			height: 60px;
-			background-size: 60px 60px;
-		}
-	}
-	
-	#socialLinks{		
-		position: relative;
-		z-index: 100;
-    	width: 100%;
-    	top: -80px;
-    	
-    	@include transition-property(visibility, opacity);
-		@include transition-delay(4 * $animationTimeNavMobile);
-    	@include transition-duration($animationTimeNavMobile);
-    		
-    	opacity: 1;
-    	visibility: visible;
-    	
-    	@extend %flexbox;
-    	@extend %justifyContent-center;
-    
-		a{
-			font-family: 'FontAwesome';
-			color: white;
-			margin: 0.6vw 0.6vw;
-			font-size: 2.2rem;
-		}
-		
-		.facebook:before{
-			content: "\f09a";
-		}
-		
-		.twitter:before{
-			content: "\f099";
-		}
-		
-		.instagram:before{
-			content: "\f16d";
-		}
-		
-		.xing:before{
-			content: "\f168";
-		}
-		
-		.linkedin:before{
-			content: "\f0e1";
-		}
-		
-		.rss:before{
-			content: "\f09e";
+		#socialLinks{		
+			
+	    	width: 100%;
+	    	box-sizing: border-box;
+	    	padding: 5vh 3vw;
+	    	
+	    	@include transition-property(visibility, opacity);
+			@include transition-delay(4 * $animationTimeNavMobile);
+	    	@include transition-duration($animationTimeNavMobile);
+	    		
+	    	opacity: 1;
+	    	visibility: visible;
+	    	
+	    	@extend %flexbox;
+	    	@extend %justifyContent-center;
+	    	@extend %flex-wrap;
+	    
+			a{
+				font-family: 'FontAwesome';
+				color: white;
+				margin: 0.6vw 0.6vw;
+				font-size: 2.2rem;
+			}
+			
+			.facebook:before{
+				content: "\f09a";
+			}
+			
+			.twitter:before{
+				content: "\f099";
+			}
+			
+			.instagram:before{
+				content: "\f16d";
+			}
+			
+			.xing:before{
+				content: "\f168";
+			}
+			
+			.linkedin:before{
+				content: "\f0e1";
+			}
+			
+			.rss:before{
+				content: "\f09e";
+			}
 		}
 	}
 	
@@ -322,17 +338,15 @@ h6{
 		width: 100%;
 		height: 40vh;
 		
-		#nav-switch{
-			left: auto;
-			right: 30px;
+		#header-floated{
+			height: 40vh;
 		}
 		
-		#socialLinks{
-			
-			top: -60px;
+		#header-floated #socialLinks{			
+			padding: 3vh 3vw;
 			
 			a{
-				margin: 0.6vw 2vw;
+				margin: 0.6vw 2.5vw;
 			}
 		}
 	}
@@ -340,12 +354,13 @@ h6{
 
 #content{
 	margin-left: 22vw;
-	
+	padding: 6vh 4vw 4vh 4vw;
+
 	@media screen and (max-width: $break-medium) {			
 		margin-left: inherit;
 	}
 	
-	#tags{
+	#content-tags{
 		
 		text-align: right;
 		color: $color-grey-dark;
@@ -367,6 +382,134 @@ h6{
 			}
 		}
 	}
+	
+	#control{
+		#control-search{			
+			#search-icon:before{
+				content:  '\f002';
+				font-family: 'FontAwesome';
+			} 
+		}
+		
+		#control-tag{
+			
+		}
+		margin-bottom: 6vh;
+	}
+}
+
+footer{
+	margin-left: 22vw;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	padding-top: 9vh;
+	
+	background-color: #242628;
+	
+	@extend %flexbox;
+	@extend %justifyContent-spaceBetween;
+	
+	
+	@media screen and (max-width: $break-medium) {			
+		margin-left: inherit;
+	}
+	
+	@media screen and (max-width: $break-small) {			
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+	
+	& > * {
+		padding-bottom: 9vh;
+	}
+	
+	#footer-tags, #newsletter{				
+		h5{
+			color: white;
+			margin-top: 0px;
+		}		
+	}
+	
+	#footer-tags{		
+		@include flex-basis(48%);
+		@include flex-shrink(4);
+		
+		@media screen and (max-width: $break-small) {			
+			width: 100%;
+		}
+		
+		#tags-container{
+			
+			@extend %flexbox;
+			@extend %flex-wrap;
+			
+			a{
+				color: white;
+				border: 1px solid white;
+				padding: 7px 10px;
+				
+				margin: 0px 20px 20px 0px;
+				
+				font-size: 1.6rem;
+				
+				cursor: pointer;
+				@include transition-duration(0.5s);			
+				@include transition-property(color, border, background-color);
+				
+				&:hover{
+					background-color: $color-theme;
+					border: 1px $color-theme solid;
+					color: #333333;
+				}
+			}
+		}
+	}
+	
+	#newsletter{				
+		@include flex-basis(48%);			
+		@include flex-shrink(1);
+		
+		@media screen and (max-width: $break-small) {			
+			width: 100%;
+		}
+	
+		form{
+			input, submit{
+				padding: 7px 10px;
+				color: white;
+				font-family: $font-hind;
+				font-size: 1.7rem;
+				line-height: 28px;
+			}
+			
+			.submit{
+				background-color: #efefef;
+				border: 1px #efefef solid;
+				margin-left: 8px;
+				color: #333333;
+				
+				cursor: pointer;
+				@include transition-duration(0.2s);			
+				@include transition-property(border, background-color);
+				
+				&:hover{
+					background-color: $color-theme;
+					border: 1px $color-theme solid;
+				}
+			}
+			
+			.email{
+				border: 1px white solid;
+				&::-moz-placeholder{color: white}
+				&:-ms-input-placeholder{ color: white}
+				&::-webkit-input-placeholder {color: white}		
+			}
+		}
+		
+		*{
+			background-color: transparent;
+		}
+	}
 }
 
 
@@ -374,10 +517,11 @@ h6{
 
 .home-template, .archive-template, .tag-template{
 	
-	#posts{
-		padding: 6vh 4vw 4vh 4vw;
+	#content{
 		background-color: #f3f5f7;
-		
+	}
+	
+	#posts{		
 		.grid{
 			.grid-item, .grid-sizer{
 				width: 48%;
@@ -477,8 +621,15 @@ h6{
 /***** Single Post *****/
 
 .post-template{	
+	
+	footer{
+		/* Need more padding, because #content + #post -> padding-left/padding-right: 8vw */
+		padding-left: 8vw;
+		padding-right: 8vw;
+	}
+	
 	#post{
-		padding: 7vh 8vmin 7vh 8vmin;
+		padding: 7vh 4vw;
 		
 		img{
 			max-width: 100%;
@@ -619,8 +770,7 @@ h6{
 					}
 				}
 			}
-		}
-		
+		}	
 		
 		
 		#post-author{		
@@ -722,4 +872,18 @@ blockquote {
 	padding: 30px 0px;
 	text-align: center;
 	font-size: 2.1rem;
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
 }

@@ -1,0 +1,10 @@
+{{#get "tags" limit="all"}}
+	<div id="footer-tags">
+		<h5>Tags</h5>
+		<div id="tags-container">
+		{{#foreach tags}}
+	    	<a href="/tag/{{slug}}">{{name}}</a>
+	    {{/foreach}}
+		</div>
+	</div>
+{{/get}}

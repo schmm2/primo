@@ -23,6 +23,7 @@
     <script type="text/javascript" src='{{asset "js/masonry.pkgd.min.js"}}'></script>
     <script type="text/javascript" src='{{asset "js/jquery-2.2.0.min.js"}}'></script>
     <script type="text/javascript" src='{{asset "js/main.js"}}'></script>
+    <script type="text/javascript" src='{{asset "js/jquery.ghostHunter.min.js"}}'></script>
      
     {{#is "post"}}
 		 <script type="text/javascript" src='{{asset "js/post.js"}}'></script>
@@ -40,17 +41,21 @@
 <body class="{{body_class}}">
     <div id="wrapper">
     	<div id="header">
-    		<div id="header-selectables">
-	    		{{#if @blog.logo}}
-	    			<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
-	    		{{else}}
-	    			<a href="{{@blog.url}}">
-		    			<div id="blog-title">{{@blog.title}}</div>
-	    			</a>
-	    		{{/if}}
-	    		<div id="nav-switch">
-		    		<div class="middle-bar"></div>
-	    		</div>		
+	    	<div id="header-floated">
+	    		<div id="selectables">
+		    		{{#if @blog.logo}}
+		    			<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
+		    		{{else}}
+		    			<a href="{{@blog.url}}">
+			    			<div id="blog-title">{{@blog.title}}</div>
+		    			</a>
+		    		{{/if}}
+		    		<div id="nav-switch">
+			    		<div class="middle-bar"></div>
+		    		</div>		
+	    		</div>
+	    		{{! ----- Social-Links -----}}
+				{{> socialLinks}}
     		</div>
     		<div id="nav-mobile">
 	    		{{navigation}}
@@ -75,14 +80,15 @@
 				{{/if}}
 			{{/if}}
 			
-			{{! ----- Social-Links -----}}
-			{{> socialLinks}}
 		</div>
 		<div id="content">
 			{{{body}}}
-		</div>	
-		
-		{{> footer}}
+		</div>		
+		<footer>
+			{{> newsletter}}
+			{{> footer-tags}}
+			{{ghost_foot}}
+		</footer>
     </div>
 </body>
 </html>

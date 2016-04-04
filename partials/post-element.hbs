@@ -1,0 +1,15 @@
+<a href="{{{url}}}" class="post grid-item" role="article" itemscope itemtype="http://schema.org/Article">
+	{{#if image}}
+		<div class="post-image" style='background-image: url("{{image}}")'></div>
+	{{/if}}
+	<div class="post-content">
+		<header class="post-header">
+			<h2 class="post-title" itemprop="headline">{{title}}</h2>
+			<time class="post-date" datetime="{{date format="DD-MMM-YYYY"}}" itemprop="datePublished">{{date format='D MMM YYYY'}}</time>
+		</header>
+		<hr class="post-header-line">
+		<div class="post-excerpt" itemprop="articleBody">
+			<p>{{excerpt words="30"}}</p>
+		</div>
+	</div>
+</a>
