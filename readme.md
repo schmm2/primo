@@ -7,6 +7,7 @@ primo - Ghost Theme v0.1
 * Masonry.js, MIT License
 * Highlight.js, BSD License
 * FitVids.js, Not set
+* Fluidbox.js, MIT
 
 ### CSS
 * Animate.css, MIT License
