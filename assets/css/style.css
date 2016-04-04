@@ -408,9 +408,13 @@ h6 {
       margin-left: inherit; } }
   #content #content-tags {
     text-align: right;
+    color: #333333;
+    margin-bottom: 6vh; }
+  #content #post-tags {
+    text-align: right;
     color: #b3b5b7;
     margin-bottom: 6vh; }
-    #content #content-tags a {
+    #content #post-tags a {
       color: #b3b5b7;
       padding: 3px 10px;
       -webkit-transition-duration: 0.2s;
@@ -422,7 +426,7 @@ h6 {
       -o-transition-property: color;
       transition-property: color;
       margin-right: 10px; }
-      #content #content-tags a:hover {
+      #content #post-tags a:hover {
         border-color: black;
         color: black; }
   #content #control {
