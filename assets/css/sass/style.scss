@@ -93,7 +93,7 @@ h6{
 				@include transition-duration(0.2s);
 			
 		}
-	}
+	} 
 	
 	#nav-mobile{
 		width: 100%;
@@ -170,6 +170,8 @@ h6{
 		
 		z-index: 2000;
 		
+		pointer-events: none;
+		
 		#selectables{		
 			@extend %flexbox;
 			@extend %justifyContent-spaceBetween;
@@ -179,6 +181,7 @@ h6{
 			
 			padding: 5vh 2vw;
 			box-sizing: border-box;
+			pointer-events: all;
 			
 			@media screen and (max-width: $break-medium) {
 				padding: 5vh 4vw;
@@ -288,6 +291,8 @@ h6{
 	    	width: 100%;
 	    	box-sizing: border-box;
 	    	padding: 5vh 3vw;
+	    	
+	    	pointer-events: all;
 	    	
 	    	@include transition-property(visibility, opacity);
 			@include transition-delay(4 * $animationTimeNavMobile);
