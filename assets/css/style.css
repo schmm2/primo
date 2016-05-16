@@ -765,7 +765,11 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #FFDE0C; }
+  color: #FFDE0C;
+  word-break: break-word; }
+
+em {
+  word-break: break-word; }
 
 html {
   font-size: 62.5%; }
