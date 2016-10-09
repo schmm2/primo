@@ -655,8 +655,12 @@ footer{
 			}
 		}
 		
-		#post-share, #post-author, #post-comments{
+		#post-share, #post-comments{
 			margin-top: 10vh;
+		}
+		
+		#post-author{
+			margin-top: 6vh;
 		}
 		
 		#post-content{
@@ -667,7 +671,8 @@ footer{
 			.code_wrap{
 				
 				position: relative;
-				
+				margin: 4vh 0px !important;
+					
 				.copy{
 					width: 20px;
 					height: 20px;
@@ -898,15 +903,12 @@ html, body{
 a {
 	text-decoration: none;
 	color: $color-theme;
-	word-break: break-word;
 }
 
-em {
-	word-break: break-word;
-}
 
 html{
 	font-size: 62.5%;
+	word-break: break-word;
 }
 
 body{
@@ -914,8 +916,8 @@ body{
 	font-weight: 300;
 }
 
-pre{
-	margin: 4vh 0px !important;
+img{
+	margin: 3vh 0px !important;
 }
 
 blockquote {

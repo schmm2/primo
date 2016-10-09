@@ -603,12 +603,15 @@ footer {
     .post-template #post .post-header .post-date {
       font-size: 2.3rem;
       color: #b3b5b7; }
-  .post-template #post #post-share, .post-template #post #post-author, .post-template #post #post-comments {
+  .post-template #post #post-share, .post-template #post #post-comments {
     margin-top: 10vh; }
+  .post-template #post #post-author {
+    margin-top: 6vh; }
   .post-template #post #post-content .fluid-width-video-wrapper {
     margin-top: 6vh; }
   .post-template #post #post-content .code_wrap {
-    position: relative; }
+    position: relative;
+    margin: 4vh 0px !important; }
     .post-template #post #post-content .code_wrap .copy {
       width: 20px;
       height: 20px;
@@ -798,21 +801,18 @@ html, body {
 
 a {
   text-decoration: none;
-  color: #FFDE0C;
-  word-break: break-word; }
-
-em {
-  word-break: break-word; }
+  color: #FFDE0C; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  word-break: break-word; }
 
 body {
   font-size: 1.9rem;
   font-weight: 300; }
 
-pre {
-  margin: 4vh 0px !important; }
+img {
+  margin: 3vh 0px !important; }
 
 blockquote {
   border-top: 1px solid #e3e5e7;
