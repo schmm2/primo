@@ -8,6 +8,7 @@ Add this code snippet to the code injection *Blog Header* area
 ```
 <script>var disqus_shortname = "ghostprimo"</script>
 ```
+Change the shortname according to your own blog
 
 ##External Libraries and Helpers
 ###JS
