@@ -1,6 +1,14 @@
 #primo
 primo - Ghost Theme v0.3
 
+## Setup
+
+###Disqus
+Add this code snippet to the code injection are
+```
+<script>var disqus_shortname = "ghostprimo"</script>
+```
+
 ##External Libraries and Helpers
 ###JS
 * Jquery, MIT License
