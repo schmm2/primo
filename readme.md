@@ -1,5 +1,5 @@
 #primo
-primo - Ghost Theme v0.1
+primo - Ghost Theme v0.3
 
 ##External Libraries and Helpers
 ###JS
@@ -15,16 +15,18 @@ primo - Ghost Theme v0.1
 
 
 ##Roadmap, to Do
-###Roadmap V0.2
-* ~~Subscribe~~
+V 0.2
 * ~~Tag overview~~
 * ~~Social Media Links~~
-* Favorite Tag for Post
-* Media Post (Youtube, Vimeo...)
 * ~~Quotes~~
 * ~~Lightbox~~
 
-###Roadmap V0.3
+V 0.3
+* ~~Copy~~
+
+V 0.4
 * Google Analytics
 * Loading Circle
 * Search, Waiting for Ghost API
+* Media Post (Youtube, Vimeo...)
+* Favorite Tag for Post
