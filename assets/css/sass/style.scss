@@ -663,6 +663,53 @@ footer{
 			.fluid-width-video-wrapper{
 				margin-top: 6vh;	
 			}
+			
+			.code_wrap{
+				
+				position: relative;
+				
+				.copy{
+					width: 20px;
+					height: 20px;
+				
+					right: 0px;
+					top: 0px;
+										
+					position: absolute;
+					
+					
+					@include transition-property(background-image);
+					@include transition-duration(0.3s);
+					
+					    
+					background-image: url('images/copy.png');
+					background-size: 20px 20px;
+					background-repeat: no-repeat; 
+										
+					
+					margin: 10px 10px 10px 0px;
+					
+					&.copy_done{
+						
+						@include transition-property(background-image);
+						@include transition-duration(0.3s);
+					
+						
+						background-image: url('images/copy_done.png');
+						
+					}
+					
+					&.hover{
+						
+						&:hover{						
+														
+							background-image: url('images/copy_hover.png');
+							cursor: pointer;
+						}			    
+	
+					}
+				}
+			}
 		}
 		
 		#post-readmore{
