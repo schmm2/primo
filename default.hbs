@@ -69,18 +69,18 @@
 		    	{{! ----- Single Post OR Tag -----}}
 				{{#if "post,tag"}}
 						{{#if post.image}}
-							<div id="header-image" style='background-image: url("{{post.image}}")'></div>
-						{{else if tag.image}}
-							<div id="header-image" style='background-image: url("{{tag.image}}")'></div>
-						{{else if @blog.cover}}
-							<div id="header-image" style='background-image: url("{{@blog.cover}}")'></div>
+							<div id="header-image" style='background-image: url("{{post.feature_image}}")'></div>
+						{{else if tag.feature_image}}
+							<div id="header-image" style='background-image: url("{{tag.feature_image}}")'></div>
+						{{else if @blog.cover_image}}
+							<div id="header-image" style='background-image: url("{{@blog.cover_image}}")'></div>
 						{{else}}
 							<div id="header-image" style='background-image: url("header-image-default.jpg")'></div>
 						{{/if}}	
 				{{! ----- Home -----}}
 				{{else}}
-					{{#if @blog.cover}}
-						<div id="header-image" style='background-image: url("{{@blog.cover}}")'></div>
+					{{#if @blog.cover_image}}
+						<div id="header-image" style='background-image: url("{{@blog.cover_image}}")'></div>
 					{{else}}
 						<div id="header-image"></div>
 					{{/if}}
