@@ -990,6 +990,8 @@ footer{
 			@include borderRadius(50%);
 			width: 30vw;
 			height: 30vw;
+			max-width: 250px;
+			max-height: 250px;
 			@extend %bgCover;
 			margin: 0px auto;
 		}

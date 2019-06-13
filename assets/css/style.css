@@ -1062,6 +1062,8 @@ footer #newsletter * {
   border-radius: 50%;
   width: 30vw;
   height: 30vw;
+  max-width: 250px;
+  max-height: 250px;
   margin: 0px auto;
 }
 
