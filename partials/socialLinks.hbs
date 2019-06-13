@@ -1,8 +1,12 @@
 <div id="socialLinks">
 	<!-- Facebook -->
-	<a href="https://www.facebook.com/mschmidli1" target="_blank" class="facebook"></a>
+    {{#if @site.facebook}}
+    <a class="facebook social-link social-link-tw" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener"></a>
+    {{/if}}
 	<!-- Twitter -->
-	<a href="https://twitter.com/tinsu19" target="_blank" class="twitter"></a>
+    {{#if @site.twitter}}
+        <a class="twitter social-link social-link-tw" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener"></a>
+    {{/if}}
 	<!-- Instagram -->
 	<!-- <a href="" target="_blank" class="instagram"></a> -->
 	<!-- Xing -->
