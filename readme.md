@@ -1,9 +1,11 @@
 #primo
+
 primo - Ghost Theme v1.2.0
 
 ## Setup
 
 ###Disqus
+
 Add this code snippet to the code injection *Blog Header* area
 ```
 <script>var disqus_shortname = "ghostprimo"</script>
@@ -11,6 +13,7 @@ Add this code snippet to the code injection *Blog Header* area
 Change the shortname according to your own blog
 
 ##External Libraries and Helpers
+
 ###JS
 * Jquery, MIT License
 * Masonry.js, MIT License
@@ -19,6 +22,7 @@ Change the shortname according to your own blog
 * Fluidbox.js, MIT
 
 ###CSS
+
 * Animate.css, MIT License
 * Font-Awesome, GPL License
 
