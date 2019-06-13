@@ -668,7 +668,8 @@ footer{
 						@extend %justifyContent-spaceBetween;
 						@extend %alignItems-center;
 						@extend %flex-wrap;
-							
+						width: 100%;
+
 						.post-date{
 							color: #dfdfdf;
 							margin: 10px 0px;
@@ -687,10 +688,11 @@ footer{
 					.post-header-line{
 						content: "";
 						height: 3px;
-						width: 40px;
+						width: 7vw;
+						align-self: flex-start;
 						background-color: $color-theme;
 						border: none;
-						margin: 5px 0px;
+						margin: 15px 0px;
 					}
 				}
 			}

@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67956301-c39e-430a-8d2b-8cb4cd0233fb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/baseClass.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/fonts.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sass/baseClass.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/baseClass.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sass/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sass/theme-settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/theme-settings.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/theme-settings.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/author.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/author.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
-              <caret line="1014" column="33" selection-start-line="1014" selection-start-column="27" selection-end-line="1014" selection-end-column="33" />
+              <caret line="1018" column="33" selection-start-line="1018" selection-start-column="27" selection-end-line="1018" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -76,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="949" column="33" selection-start-line="949" selection-start-column="33" selection-end-line="949" selection-end-column="33" />
+            <state relative-caret-position="577">
+              <caret line="694" column="33" selection-start-line="694" selection-start-column="33" selection-end-line="694" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -235,12 +227,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560421026801</updated>
-      <workItem from="1560421028399" duration="2644000" />
+      <workItem from="1560421028399" duration="3828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2644000" />
+    <option name="totallyTimeSpent" value="3828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
@@ -365,14 +357,14 @@
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
-          <caret line="1014" column="33" selection-start-line="1014" selection-start-column="27" selection-end-line="1014" selection-end-column="33" />
+          <caret line="1018" column="33" selection-start-line="1018" selection-start-column="27" selection-end-line="1018" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="949" column="33" selection-start-line="949" selection-start-column="33" selection-end-line="949" selection-end-column="33" />
+        <state relative-caret-position="577">
+          <caret line="694" column="33" selection-start-line="694" selection-start-column="33" selection-end-line="694" selection-end-column="33" />
         </state>
       </provider>
     </entry>

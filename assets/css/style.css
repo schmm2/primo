@@ -774,6 +774,9 @@ footer #newsletter * {
 .home-template #posts .grid .grid-item .post-content, .paged #posts .grid .grid-item .post-content, .tag-template #posts .grid .grid-item .post-content {
   padding: 4vh 3vmax 4vh 3vmax;
 }
+.home-template #posts .grid .grid-item .post-content .post-header, .paged #posts .grid .grid-item .post-content .post-header, .tag-template #posts .grid .grid-item .post-content .post-header {
+  width: 100%;
+}
 .home-template #posts .grid .grid-item .post-content .post-header .post-date, .paged #posts .grid .grid-item .post-content .post-header .post-date, .tag-template #posts .grid .grid-item .post-content .post-header .post-date {
   color: #dfdfdf;
   margin: 10px 0px;
@@ -788,10 +791,11 @@ footer #newsletter * {
 .home-template #posts .grid .grid-item .post-content .post-header-line, .paged #posts .grid .grid-item .post-content .post-header-line, .tag-template #posts .grid .grid-item .post-content .post-header-line {
   content: "";
   height: 3px;
-  width: 40px;
+  width: 7vw;
+  align-self: flex-start;
   background-color: #FFDE0C;
   border: none;
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 .home-template #posts .pagination, .paged #posts .pagination, .tag-template #posts .pagination {
   margin: 4vh 0px 3vh 0px;
