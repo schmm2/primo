@@ -1,10 +1,10 @@
-#primo
+# Ghost Theme - primo
 
 primo - Ghost Theme v1.2.0
 
 ## Setup
 
-###Disqus
+### Disqus
 
 Add this code snippet to the code injection *Blog Header* area
 ```
@@ -12,21 +12,21 @@ Add this code snippet to the code injection *Blog Header* area
 ```
 Change the shortname according to your own blog
 
-##External Libraries and Helpers
+## External Libraries and Helpers
 
-###JS
+### JS
 * Jquery, MIT License
 * Masonry.js, MIT License
 * Highlight.js, BSD License
 * FitVids.js, Not set
 * Fluidbox.js, MIT
 
-###CSS
+### CSS
 
 * Animate.css, MIT License
 * Font-Awesome, GPL License
 
-##Roadmap, to Do
+## Roadmap, to Do
 
 * ~~Google Analytics~~
 * Loading Circle
