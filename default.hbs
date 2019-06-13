@@ -47,11 +47,11 @@
 	    	<div id="header">
 		    	<div id="header-floated">
 		    		<div id="selectables">
-			    		{{#if @blog.logo}}
-			    			<a href="{{@blog.url}}" id="logo" style='background-image: url("{{@blog.logo}}")'></a>
+			    		{{#if @site.logo}}
+			    			<a href="{{@site.url}}" id="logo" style='background-image: url("{{@site.logo}}")'></a>
 			    		{{else}}
-			    			<a href="{{@blog.url}}">
-				    			<div id="blog-title">{{@blog.title}}</div>
+			    			<a href="{{@site.url}}">
+				    			<div id="blog-title">{{@site.title}}</div>
 			    			</a>
 			    		{{/if}}
 			    		<div id="nav-switch">
@@ -70,15 +70,15 @@
 							<div id="header-image" style='background-image: url("{{post.feature_image}}")'></div>
 						{{else if tag.feature_image}}
 							<div id="header-image" style='background-image: url("{{tag.feature_image}}")'></div>
-						{{else if @blog.cover_image}}
-							<div id="header-image" style='background-image: url("{{@blog.cover_image}}")'></div>
+						{{else if @site.cover_image}}
+							<div id="header-image" style='background-image: url("{{@site.cover_image}}")'></div>
 						{{else}}
 							<div id="header-image" style='background-image: url("header-image-default.jpg")'></div>
 						{{/if}}	
 				{{! ----- Home -----}}
 				{{else}}
-					{{#if @blog.cover_image}}
-						<div id="header-image" style='background-image: url("{{@blog.cover_image}}")'></div>
+					{{#if @site.cover_image}}
+						<div id="header-image" style='background-image: url("{{@site.cover_image}}")'></div>
 					{{else}}
 						<div id="header-image"></div>
 					{{/if}}

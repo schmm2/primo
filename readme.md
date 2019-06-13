@@ -1,5 +1,5 @@
 #primo
-primo - Ghost Theme v0.3
+primo - Ghost Theme v1.2.0
 
 ## Setup
 
@@ -22,19 +22,9 @@ Change the shortname according to your own blog
 * Animate.css, MIT License
 * Font-Awesome, GPL License
 
-
 ##Roadmap, to Do
-V 0.2
-* ~~Tag overview~~
-* ~~Social Media Links~~
-* ~~Quotes~~
-* ~~Lightbox~~
 
-V 0.3
-* ~~Copy~~
-
-V 0.4
-* Google Analytics
+* ~~Google Analytics~~
 * Loading Circle
 * Search, Waiting for Ghost API
 * Media Post (Youtube, Vimeo...)
