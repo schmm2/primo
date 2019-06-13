@@ -1,31 +1,40 @@
 /*----- Monteserrat -----*/
 @font-face {
-  font-family: 'Monteserrat';
+  font-family: "Monteserrat";
   src: url("../fonts/montserrat/montserrat-regular.ttf") format("truetype");
-  font-weight: 400; }
+  font-weight: 400;
+}
 @font-face {
-  font-family: 'Monteserrat';
+  font-family: "Monteserrat";
   src: url("../fonts/montserrat/montserrat-bold.ttf") format("truetype");
-  font-weight: 700; }
+  font-weight: 700;
+}
 /*----- Hind -----*/
 @font-face {
-  font-family: 'Hind';
+  font-family: "Hind";
   src: url("../fonts/hind/Hind-Light.ttf") format("truetype");
-  font-weight: 300; }
+  font-weight: 300;
+}
 @font-face {
-  font-family: 'Hind';
+  font-family: "Hind";
   src: url("../fonts/hind/Hind-Regular.ttf") format("truetype");
-  font-weight: 400; }
+  font-weight: 400;
+}
 @font-face {
-  font-family: 'Hind';
+  font-family: "Hind";
   src: url("../fonts/hind/Hind-Medium.ttf") format("truetype");
-  font-weight: 500; }
+  font-weight: 500;
+}
 /*----- Oswald -----*/
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   src: url("../fonts/oswald/Oswald-Light.ttf") format("truetype");
-  font-weight: 300; }
+  font-weight: 300;
+}
 /*----- font Awesome -----*/
 @font-face {
-  font-family: 'FontAwesome';
-  src: url("../fonts/font-awesome-4.5.0/fontawesome-webfont.ttf") format("truetype"); }
+  font-family: "FontAwesome";
+  src: url("../fonts/font-awesome-4.5.0/fontawesome-webfont.ttf") format("truetype");
+}
+
+/*# sourceMappingURL=fonts.css.map */
