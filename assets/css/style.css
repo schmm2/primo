@@ -1105,6 +1105,16 @@ blockquote {
   font-size: 2.1rem;
 }
 
+textarea,
+input.text,
+input[type=text],
+input[type=button],
+input[type=submit],
+.input-checkbox {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 textarea:hover,
 input:hover,
 textarea:active,
@@ -1115,7 +1125,6 @@ button:focus,
 button:active,
 button:hover {
   outline: 0px !important;
-  -webkit-appearance: none;
 }
 
 /*# sourceMappingURL=style.css.map */
