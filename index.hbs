@@ -4,10 +4,7 @@
 		<div id="content-tags"># {{name}}</div>
 	{{/tag}}
 		
-	<div class="grid" data-masonry='{ "itemSelector": ".grid-item", "gutter": 5, "gutter": ".gutter-sizer", "columnWidth": ".grid-sizer", "percentPosition": true }'>
-		<div class="grid-sizer"></div>
-		<div class="gutter-sizer"></div>
-		
+	<div class="grid">		
 		{{#foreach posts}}
 			<a href="{{{url}}}" class="post grid-item" role="article" itemscope itemtype="http://schema.org/Article">
 				{{#if feature_image}}

@@ -1,11 +1,25 @@
 {
   "name": "primo",
-  "author": {"email": "hello@martinschmidli.com"},
+  "author": {
+    "email": "hello@martinschmidli.com"
+  },
   "version": "1.2.0",
   "license": "MIT",
-  "config": { "posts_per_page": 10},
-  "keywords": ["ghost-theme"],
+  "config": {
+    "posts_per_page": 10
+  },
+  "scripts": {
+    "sass-watch": "node-sass -w assets/sass/ -o assets/css/",
+    "sass": "node-sass assets/sass/ -o assets/css/"
+  },
+  "keywords": [
+    "ghost-theme"
+  ],
   "engines": {
     "ghost-api": "v2"
-  }
+  },
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {}
 }
