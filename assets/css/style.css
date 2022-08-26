@@ -686,7 +686,7 @@ footer {
 .home-template #posts .grid, .paged #posts .grid, .tag-template #posts .grid {
   display: grid;
   grid-gap: 4rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); }
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); }
   .home-template #posts .grid .grid-item, .paged #posts .grid .grid-item, .tag-template #posts .grid .grid-item {
     display: block;
     background-color: white;
