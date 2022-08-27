@@ -7,10 +7,19 @@ primo - Ghost Theme
 ### Disqus
 
 Add this code snippet to the code injection *Blog Header* area
+
 ```
 <script>var disqus_shortname = "ghostprimo"</script>
 ```
 Change the shortname according to your own blog
+
+## Site Url
+
+```
+ghost config url https://yournewdomain.com
+ghost restart
+```
+
 
 ## External Libraries and Helpers
 
@@ -25,11 +34,3 @@ Change the shortname according to your own blog
 
 * Animate.css, MIT License
 * Font-Awesome, GPL License
-
-## Roadmap, to Do
-
-* ~~Google Analytics~~
-* Loading Circle
-* Search, Waiting for Ghost API
-* Media Post (Youtube, Vimeo...)
-* Favorite Tag for Post
