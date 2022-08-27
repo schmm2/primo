@@ -1,6 +1,6 @@
 # Ghost Theme - primo
 
-primo - Ghost Theme v1.2.0
+primo - Ghost Theme
 
 ## Setup
 
